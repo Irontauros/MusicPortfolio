@@ -99,7 +99,7 @@ export default function AboutMe() {
 
         {/* 5. Determinação e legado */}
         <div style={sectionStyle}>
-          <img src="../public/setup.png" alt="Estúdio caseiro" style={imageStyle} />
+          <img src="../public/singing.png" alt="Estúdio caseiro" style={imageStyle} />
           <p style={textStyle}>
             Aprendi tudo sozinho. Componho, gravo, edito, misturo, tudo feito em casa, tudo feito por mim. Não tenho uma carreira construída, mas tenho motivação como ninguém.
             Faço isto porque preciso. Porque é a única forma que encontrei de viver com o que sinto.
