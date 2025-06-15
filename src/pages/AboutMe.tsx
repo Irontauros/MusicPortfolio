@@ -58,7 +58,7 @@ export default function AboutMe() {
 
         {/* 1. Quem sou eu */}
         <div style={sectionStyle}>
-          <img src="../public/guitar.jpeg" alt="Loop pedal e guitarra" style={imageStyle} />
+          <img src="/guitar.jpeg" alt="Loop pedal e guitarra" style={imageStyle} />
           <p style={textStyle}>
             Sou cantor e compositor. As minhas canções nascem em silêncio. Com uma guitarra nas mãos e uma memória a repetir-se. Crio a sós, como quem escreve cartas que nunca envia.
             As minhas letras não seguem regras. Nascem como têm de nascer. São sentimentos que talvez não saibamos dizer ou explicar, mas que precisamos de ouvir.
@@ -67,7 +67,7 @@ export default function AboutMe() {
 
         {/* 2. Sobre ela */}
         <div style={{ ...sectionStyle, flexDirection: 'row-reverse' }}>
-          <img src="../public/B.png" alt="Memória" style={imageStyle} />
+          <img src="/B.png" alt="Memória" style={imageStyle} />
           <p style={textStyle}>
             Tudo começou com uma rapariga. Conhecemo-nos no quinto ano e no sétimo ano tivemos algo, não foi um namoro, muito menos um relacionamento sério, mas foi o mais perto que alguma vez estivemos um do outro.
             Nunca mais voltámos a estar juntos desde então. E mesmo assim, em segredo, ela foi sempre tudo para mim.
@@ -77,7 +77,7 @@ export default function AboutMe() {
 
         {/* 3. Primeiras composições e o Tony */}
         <div style={sectionStyle}>
-          <img src="../public/tony.png" alt="Com Tony Carreira" style={imageStyle} />
+          <img src="/tony.png" alt="Com Tony Carreira" style={imageStyle} />
           <p style={textStyle}>
             Escrevi a minha primeira canção aos 12 anos e ainda guardo algumas dessas letras. Uma delas nasceu no meu oitavo ano, sobreviveu até hoje e tornou-se uma música oficial.
             Um dos meus maiores objetivos é que, um dia, alguém se identifique e dedique as minhas canções, como eu dediquei tantas de outros artistas. Que estas músicas encontrem quem precisa delas.
@@ -86,7 +86,7 @@ export default function AboutMe() {
 
         {/* 4. Arte e propósito */}
         <div style={{ ...sectionStyle, flexDirection: 'row-reverse' }}>
-          <img src="../public/playing.png" alt="Esperança" style={imageStyle} />
+          <img src="/playing.png" alt="Esperança" style={imageStyle} />
           <p style={textStyle}>
             Não tenho palco, nem contrato, nem ninguém a fazer isto comigo. Só tenho canções. E vontade.
             Acredito que cada canção que gravo pode chegar até ela. Talvez a faça lembrar, talvez a faça pensar. Talvez não.
@@ -99,7 +99,7 @@ export default function AboutMe() {
 
         {/* 5. Determinação e legado */}
         <div style={sectionStyle}>
-          <img src="../public/singing.png" alt="Estúdio caseiro" style={imageStyle} />
+          <img src="/singing.png" alt="Estúdio caseiro" style={imageStyle} />
           <p style={textStyle}>
             Aprendi tudo sozinho. Componho, gravo, edito, misturo, tudo feito em casa, tudo feito por mim. Não tenho uma carreira construída, mas tenho motivação como ninguém.
             Faço isto porque preciso. Porque é a única forma que encontrei de viver com o que sinto.
