@@ -1,0 +1,155 @@
+/* Covers.css */
+.covers-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 6rem 1rem 4rem 260px;
+  background-color: var(--bg-beige);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.covers-page.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cover-block {
+    scroll-margin-top: 80px;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  box-sizing: border-box;
+  position: relative;
+  top: -60px;
+  padding-top: 60px;
+}
+
+.cover-block.reversed {
+  flex-direction: row-reverse;
+}
+
+.video-wrapper {
+  width: 560px;
+  height: 315px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.text-container {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #000;
+}
+
+.text-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.text-container .artist {
+  font-size: 1.1rem;
+  margin: 0;
+  color: #333;
+}
+
+.text-container .version {
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  color: #666;
+}
+
+.text-container .description {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0.5rem 0 0 0;
+}
+
+/* ------------- Responsivo ------------- */
+
+@media (max-width: 1024px) {
+  .covers-page {
+    padding-left: 200px;
+    gap: 2rem;
+  }
+
+  .cover-block {
+    flex-direction: column;
+    gap: 2rem;
+    top: -30px;
+    padding-top: 30px;
+  }
+
+  .cover-block.reversed {
+    flex-direction: column;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .text-container {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .text-container .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .covers-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .text-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-container .artist,
+  .text-container .version {
+    font-size: 1rem;
+  }
+
+  .text-container .description {
+    font-size: 0.95rem;
+  }
+
+  .video-wrapper {
+    border-radius: 10px;
+  }
+}
