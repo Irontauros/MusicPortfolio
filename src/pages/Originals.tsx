@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
-import '../styles/Originals.css';
+import '../styles/originals.css';
 
 type OriginalItem = {
   id: string;

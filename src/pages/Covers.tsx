@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Sidebar from '../components/Sidebar';
-import '../styles/Covers.css';
+import '../styles/covers.css';
 
 type CoverItem = {
   id: string;
