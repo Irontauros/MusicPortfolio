@@ -71,6 +71,9 @@ export default function Originals() {
 
   return (
     <main className={`covers-page ${visible ? 'visible' : ''}`}>
+            <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>
+        Originais
+      </h1>
       {originalsList.map((item, index) => (
         <OriginalBlock
           key={item.id}
