@@ -21,43 +21,43 @@ export default function Navbar() {
     flexDirection: isMobile ? 'column' : 'row',
     justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
-    padding: isMobile ? '1.2rem 1.5rem' : '1rem 2rem',
+    padding: isMobile ? '1rem 1.5rem' : '1rem 2rem',
     backgroundColor: '#FFFDF2',
     color: '#000000',
     position: 'fixed',
     top: 0,
     width: '100%',
-    height: isMobile ? '120px' : '60px',
+    height: isMobile ? '120px' : '60px', // ✅ Dobro da altura só no mobile
     zIndex: 100,
     boxSizing: 'border-box',
     borderBottom: '1px solid #000000',
   };
 
   const logoStyle: CSSProperties = {
-    fontSize: isMobile ? '2rem' : '1.5rem',
+    fontSize: isMobile ? '1.2rem' : '1.5rem',
     fontWeight: 700,
     color: '#000000',
     textDecoration: 'none',
     whiteSpace: 'nowrap',
-    marginBottom: isMobile ? '0.8rem' : '0',
+    marginBottom: isMobile ? '0.5rem' : '0',
   };
 
   const navLinksContainer: CSSProperties = {
     display: 'flex',
     justifyContent: isMobile ? 'center' : 'flex-end',
     flexWrap: 'wrap',
-    gap: isMobile ? '1.5rem' : '2rem',
+    gap: isMobile ? '0.8rem' : '2rem',
     width: isMobile ? '100%' : 'auto',
     overflowX: 'auto',
-    paddingLeft: isMobile ? '2rem' : '0',
+    paddingLeft: isMobile ? '2.5rem' : '0',
   };
 
   const linkStyle = (isActive: boolean): CSSProperties => ({
     textDecoration: 'none',
-    paddingBottom: '3px',
+    paddingBottom: '2px',
     color: isActive ? '#000000' : '#333333',
-    fontWeight: isActive ? 'bold' : 600,
-    fontSize: isMobile ? '1.6rem' : '1rem',
+    fontWeight: isActive ? 'bold' : 500,
+    fontSize: isMobile ? '0.85rem' : '1rem',
     borderBottom: isActive ? '2px solid #000000' : 'none',
     whiteSpace: 'nowrap',
     transition: 'all 0.3s ease-in-out',
