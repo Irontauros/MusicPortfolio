@@ -40,14 +40,16 @@ export default function Navbar() {
     marginBottom: '0.3rem',
   };
 
-  const navLinksContainer: CSSProperties = {
-    display: 'flex',
-    justifyContent: 'center',
-    flexWrap: 'wrap',
-    gap: isMobile ? '0.8rem' : '2rem',
-    width: '100%',
-    overflowX: 'auto',
-  };
+const navLinksContainer: CSSProperties = {
+  display: 'flex',
+  justifyContent: 'center',
+  flexWrap: 'wrap',
+  gap: isMobile ? '0.8rem' : '2rem',
+  width: '100%',
+  overflowX: 'auto',
+  paddingLeft: isMobile ? '2.5rem' : '0', // <- ESTA LINHA
+};
+
 
   const linkStyle = (isActive: boolean): CSSProperties => ({
     textDecoration: 'none',

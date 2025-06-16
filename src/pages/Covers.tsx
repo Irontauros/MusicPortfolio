@@ -18,14 +18,12 @@ const coversList: CoverItem[] = [
     label: 'Volta',
     artist: 'Diogo Piçarra',
     version: 'Versão acapella',
-    description: `Há canções que dizem tudo por nós — e esta é uma delas.
-Quando a canto, é como se a tivesse mesmo à minha frente. Como se, por instantes, o tempo recuasse e eu ainda pudesse tentar fazê-la voltar.
+    description: `Há canções que dizem tudo por nós, e esta é uma delas.
+Quando a canto, é como se a tivesse mesmo à minha frente.
 
 Não há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.
 Cada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.
-
-E por mais versões que existam, esta é a minha forma de gritar em voz baixa. De pedir, mesmo que não ouça, que volte.
-Nem que seja só para me despedir direito.`,
+`,
     videoId: 'mLp800Y-W7Q',
   },
   {
@@ -36,11 +34,8 @@ Nem que seja só para me despedir direito.`,
     description: `Se eu pudesse escolher uma única canção para lhe mostrar o que sinto… seria esta.
 Porque tudo faz sentido, se for contigo.
 
-Mesmo nos dias em que tudo corre mal, em que o mundo parece desabar — se ela estivesse ali, ao meu lado, bastava.
-E esta música é isso: uma declaração em forma de canção, uma certeza que resistiu ao tempo.
-
-Canto isto como quem confessa algo que guardou por demasiado tempo.
-Porque mesmo que ela já não oiça, eu precisava de dizer — que contigo, tudo valia a pena. E ainda vale.`,
+Mesmo nos dias em que tudo corre mal, em que o mundo parece desabar, se ela estivesse ali, ao meu lado, bastava.
+Canto isto como quem confessa algo que guardou por demasiado tempo.`,
     videoId: 'VIDEO_ID_CONTIGO',
   },
   {
@@ -53,8 +48,6 @@ Gostava que ela não significasse tudo isto, que não fosse a razão por trás d
 Mas odeio que é verdade: ela ainda é.
 
 Odeio que é verdade que o tempo passou e nada mudou por dentro.
-Que mesmo quando tento seguir, há sempre algo que me puxa de volta.
-Há dias em que preferia esquecê-la, não por ódio, mas por sobrevivência.
 
 Mas não consigo. Esta canção é isso. Uma verdade que dói.
 Uma confissão que eu não queria fazer.
@@ -70,11 +63,8 @@ Uma parte de mim que ainda não consegui deixar.`,
     description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.
 Só um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.
 
-Há algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor — mesmo que esse “melhor” não me inclua.
-E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.
-
-Cada vez que a canto, sinto que lhe escrevo uma carta que nunca enviei.
-Só queria que ela soubesse… que, apesar de tudo, continuo a querer que seja feliz.`,
+Há algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua.
+E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
     videoId: 'VIDEO_ID_LEWIS',
   },
 ];

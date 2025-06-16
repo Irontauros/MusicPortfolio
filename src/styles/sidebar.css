@@ -6,8 +6,8 @@
   left: 0;
   width: 200px;
   height: calc(100vh - 64px);
-  background-color: #f9f9f9;
-  border-right: 1px solid #ddd;
+  background-color: var(--bg-beige); /* igual à navbar */
+  border-right: 1px solid #000000;
   padding: 1rem;
   box-sizing: border-box;
   overflow-y: auto;
@@ -35,13 +35,13 @@
 
 .sidebar nav a {
   text-decoration: none;
-  color: #333;
+  color: var(--text-dark); /* #000000 via app.css */
   font-weight: 500;
   transition: color 0.2s;
 }
 
 .sidebar nav a:hover {
-  color: #000;
+  color: #222222;
 }
 
 /* Botão toggle para mobile */
@@ -50,16 +50,21 @@
   top: 16px;
   left: 16px;
   z-index: 100;
-  background: #000;
-  color: white;
+  background: var(--color-dark); /* Preto */
+  color: var(--color-light); /* Cream */
   border: none;
   font-size: 1.5rem;
   padding: 0.5rem 0.75rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
-/* Esconde sidebar em mobile quando fechada */
+.sidebar-toggle:hover {
+  background: #222;
+}
+
+/* Mobile refinamentos */
 @media (max-width: 768px) {
   .sidebar {
     width: 160px;
