@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 
 export default function AboutMe() {
   const [visible, setVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 300);
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    }
     return () => clearTimeout(timer);
   }, []);
 
@@ -39,7 +43,7 @@ export default function AboutMe() {
       style={{
         minHeight: '100vh',
         width: '100%',
-        padding: '4rem 1.5rem',
+        padding: isMobile ? '6rem 1.5rem 4rem' : '4rem 1.5rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -50,18 +54,19 @@ export default function AboutMe() {
         boxSizing: 'border-box',
       }}
     >
-      <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>
+      <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '2rem' }}>
         Sobre mim
       </h1>
 
       <div style={{ width: '100%', maxWidth: '1400px', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
-
         {/* 1. Quem sou eu */}
         <div style={sectionStyle}>
           <img src="/guitar.jpeg" alt="Loop pedal e guitarra" style={imageStyle} />
           <p style={textStyle}>
-            Sou cantor e compositor. As minhas canções nascem em silêncio. Com uma guitarra nas mãos e uma memória a repetir-se. Crio a sós, como quem escreve cartas que nunca envia.
-            As minhas letras não seguem regras. Nascem como têm de nascer. São sentimentos que talvez não saibamos dizer ou explicar, mas que precisamos de ouvir.
+            Sou cantor e compositor. As minhas canções nascem em silêncio. Com uma guitarra nas mãos e uma memória a repetir-se.
+            Crio a sós, como quem escreve cartas que nunca envia.
+            As minhas letras não seguem regras. Nascem como têm de nascer. São sentimentos que talvez não saibamos dizer ou explicar,
+            mas que precisamos de ouvir.
           </p>
         </div>
 
@@ -69,7 +74,8 @@ export default function AboutMe() {
         <div style={{ ...sectionStyle, flexDirection: 'row-reverse' }}>
           <img src="/B.png" alt="Memória" style={imageStyle} />
           <p style={textStyle}>
-            Tudo começou com uma rapariga. Conhecemo-nos no quinto ano e no sétimo ano tivemos algo, não foi um namoro, muito menos um relacionamento sério, mas foi o mais perto que alguma vez estivemos um do outro.
+            Tudo começou com uma rapariga. Conhecemo-nos no quinto ano e no sétimo ano tivemos algo, não foi um namoro, muito menos um relacionamento sério,
+            mas foi o mais perto que alguma vez estivemos um do outro.
             Nunca mais voltámos a estar juntos desde então. Só como amigos e mesmo assim, em segredo, ela foi sempre tudo para mim.
             A razão por trás de cada escolha. Mesmo nos momentos em que eu não percebia, ela era o centro de tudo.
           </p>
@@ -79,8 +85,10 @@ export default function AboutMe() {
         <div style={sectionStyle}>
           <img src="/tony.png" alt="Com Tony Carreira" style={imageStyle} />
           <p style={textStyle}>
-            Escrevi a minha primeira canção aos 12 anos e ainda guardo algumas dessas letras. Uma delas nasceu no meu oitavo ano, sobreviveu até hoje e tornou-se uma música oficial.
-            Um dos meus maiores objetivos é que, um dia, alguém se identifique e dedique as minhas canções, como eu dediquei tantas de outros artistas. Que estas músicas encontrem quem precisa delas.
+            Escrevi a minha primeira canção aos 12 anos e ainda guardo algumas dessas letras. Uma delas nasceu no meu oitavo ano,
+            sobreviveu até hoje e tornou-se uma música oficial.
+            Um dos meus maiores objetivos é que, um dia, alguém se identifique e dedique as minhas canções, como eu dediquei tantas de outros artistas.
+            Que estas músicas encontrem quem precisa delas.
           </p>
         </div>
 
@@ -101,14 +109,14 @@ export default function AboutMe() {
         <div style={sectionStyle}>
           <img src="/singing.png" alt="Estúdio caseiro" style={imageStyle} />
           <p style={textStyle}>
-            Aprendi tudo sozinho. Componho, gravo, edito, misturo, tudo feito em casa, tudo feito por mim. Não tenho uma carreira construída, mas tenho motivação como ninguém.
+            Aprendi tudo sozinho. Componho, gravo, edito, misturo, tudo feito em casa, tudo feito por mim.
+            Não tenho uma carreira construída, mas tenho motivação como ninguém.
             Faço isto porque preciso. Porque é a única forma que encontrei de viver com o que sinto.
             <br /><br />
             <em>"A música expressa o que não pode ser dito em palavras, mas não pode permanecer em silêncio."</em><br />
             — Victor Hugo
           </p>
         </div>
-
       </div>
     </div>
   );
