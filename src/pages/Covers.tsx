@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Sidebar from '../components/Sidebar';
 import '../styles/covers.css';
 
 type CoverItem = {
@@ -18,7 +17,7 @@ const coversList: CoverItem[] = [
     artist: 'Diogo Piçarra',
     version: 'Versão acapella',
     description: `Há canções que dizem tudo por nós, e esta é uma delas. Quando a canto, é como se a tivesse mesmo à minha frente.\n\nNão há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.\n\nCada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.`,
-    videoId: 'mLp800Y-W7Q',
+    videoId: 'GZN_XVLZ9k4',
   },
   {
     id: 'contigo',
@@ -26,7 +25,7 @@ const coversList: CoverItem[] = [
     artist: 'Fernando Daniel',
     version: 'Versão acústica',
     description: `Se eu pudesse escolher uma única canção para lhe mostrar o que sinto… seria esta.\n\n-"Porque tudo faz sentido, se for contigo."\n\nMesmo nos dias em que tudo corre mal, em que o mundo parece desabar, se ela estivesse ali, ao meu lado, bastava. Canto isto como quem confessa algo que guardou por demasiado tempo.`,
-    videoId: 'VIDEO_ID_CONTIGO',
+    videoId: 'Hu_KINCMjkg',
   },
   {
     id: 'ihate',
@@ -42,7 +41,7 @@ const coversList: CoverItem[] = [
     artist: 'Lewis Capaldi',
     version: 'Versão acústica',
     description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.\n\nSó um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.\n\nHá algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua. E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
-    videoId: 'VIDEO_ID_LEWIS',
+    videoId: 'hsFHSdU6c8o',
   },
 ];
 
@@ -91,13 +90,10 @@ export default function Covers() {
   }, []);
 
   return (
-    <>
-      <Sidebar items={coversList.map(({ id, label }) => ({ id, label }))} />
-      <main className={`covers-page ${visible ? 'visible' : ''}`}>
-        {coversList.map((item, index) => (
-          <CoverBlock key={item.id} {...item} reversed={index % 2 !== 0} />
-        ))}
-      </main>
-    </>
+    <main className={`covers-page ${visible ? 'visible' : ''}`}>
+      {coversList.map((item, index) => (
+        <CoverBlock key={item.id} {...item} reversed={index % 2 !== 0} />
+      ))}
+    </main>
   );
 }

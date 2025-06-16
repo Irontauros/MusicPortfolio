@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Sidebar from '../components/Sidebar';
 import '../styles/originals.css';
 
 type OriginalItem = {
@@ -33,16 +32,8 @@ const originalsList: OriginalItem[] = [
     description: `Escrevi esta canção quando tinha 13 anos. Via-a a tentar com alguém que não a fazia feliz, e mesmo sem entender muito da vida, já sentia que ela merecia mais. Ou, pelo menos, alguém diferente. Alguém como eu.\n\nEra para ele, na altura. Mas o tempo passou, e talvez ainda faça sentido hoje.`,
     videoId: 'l829P0w93_w?si=w-tr-ChAl3A8K4KA',
   },
-  /*{
-    id: 'sequiseres',
-    label: 'Se Quiseres',
-    version: 'Original acústico',
-    description: `É um monólogo, talvez. Só para lhe lembrar que, se ela quiser, ainda tem aqui alguém.\n - "Se quiseres falar, estou pronto. Se quiseres que eu vá, eu vou".\n\n-"Tu sabes o que eu queria: falar contigo, visitar-te, estar contigo no teu aniversário, ter-te no meu. Mas já nem penso nisso. Porque nunca tive o que queria. Por isso… se quiseres..."`,
-    videoId: 'VIDEO_ID_EXEMPLO',
-  },*/
 ];
 
-// Componente do bloco original
 function OriginalBlock({ id, label, version, description, videoId, reversed }: OriginalItem) {
   return (
     <section id={id} className={`cover-block ${reversed ? 'reversed' : ''}`}>
@@ -70,7 +61,6 @@ function OriginalBlock({ id, label, version, description, videoId, reversed }: O
   );
 }
 
-// Componente principal Originals
 export default function Originals() {
   const [visible, setVisible] = useState(false);
 
@@ -80,17 +70,14 @@ export default function Originals() {
   }, []);
 
   return (
-    <>
-      <Sidebar items={originalsList.map(({ id, label }) => ({ id, label }))} />
-      <main className={`covers-page ${visible ? 'visible' : ''}`}>
-        {originalsList.map((item, index) => (
-          <OriginalBlock
-            key={item.id}
-            {...item}
-            reversed={index % 2 === 1} // alterna reversed para os ímpares
-          />
-        ))}
-      </main>
-    </>
+    <main className={`covers-page ${visible ? 'visible' : ''}`}>
+      {originalsList.map((item, index) => (
+        <OriginalBlock
+          key={item.id}
+          {...item}
+          reversed={index % 2 === 1}
+        />
+      ))}
+    </main>
   );
 }

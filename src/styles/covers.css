@@ -35,19 +35,27 @@
 }
 
 .video-wrapper {
-  width: 560px;
-  height: 315px; /* Padrão 16:9 horizontal */
+  position: relative;
+  width: 100%;       /* usa 100% da largura do pai, para ser responsivo */
+  max-width: 560px;  /* largura máxima, igual ao que você já tinha */
+  aspect-ratio: 16 / 9;  /* forçar proporção 16:9 diretamente */
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0; /* Evita encolher */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  flex-shrink: 0;
 }
 
 .video-wrapper iframe {
+  position: absolute;  /* só se usar padding-top + position relative; com aspect-ratio não precisa */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
+  object-fit: cover;  /* para manter o vídeo sem distorcer */
 }
+
 
 .text-container {
   flex: 1;
@@ -94,14 +102,13 @@
   .cover-block,
   .cover-block.reversed {
     flex-direction: column;
+    flex-wrap: wrap; /* permite quebra */
     gap: 2rem;
   }
 
   .video-wrapper {
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
+    padding-top: 56.25%;
   }
 
   .text-container {

@@ -11,7 +11,7 @@ export default function Navbar() {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // verificar ao montar
+    handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -27,6 +27,7 @@ export default function Navbar() {
     position: 'fixed',
     top: 0,
     width: '100%',
+    height: '60px',
     zIndex: 100,
     boxSizing: 'border-box',
     borderBottom: '1px solid #000000',

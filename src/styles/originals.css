@@ -22,7 +22,7 @@
   scroll-margin-top: 80px;
   max-width: 1200px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* permite quebra para responsividade */
   align-items: center;
   justify-content: center;
   gap: 2rem;
@@ -34,19 +34,27 @@
 }
 
 .video-wrapper {
-  width: 350px;
-  height: 620px;
+  position: relative;
+  width: 100%;       /* usa 100% da largura do pai, para ser responsivo */
+  max-width: 560px;  /* largura máxima, igual ao que você já tinha */
+  aspect-ratio: 16 / 9;  /* forçar proporção 16:9 diretamente */
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
   flex-shrink: 0;
 }
 
 .video-wrapper iframe {
+  position: absolute;  /* só se usar padding-top + position relative; com aspect-ratio não precisa */
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  display: block;
+  object-fit: cover;  /* para manter o vídeo sem distorcer */
 }
+
 
 .text-container {
   flex: 1;
@@ -74,4 +82,62 @@
   line-height: 1.8;
   color: #000;
   white-space: pre-line;
+}
+
+/* Responsivo para telas médias */
+@media (max-width: 1024px) {
+  .covers-page {
+    gap: 3rem;
+  }
+
+  .cover-block,
+  .cover-block.reversed {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .video-wrapper {
+    width: 100%;
+    padding-top: 56.25%; /* mantém 16:9 */
+  }
+
+  .text-container {
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .text-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+  .covers-page {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .text-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .text-container .artist,
+  .text-container .version {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+  }
+
+  .video-wrapper {
+    border-radius: 10px;
+  }
 }
