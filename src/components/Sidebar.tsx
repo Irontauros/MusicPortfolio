@@ -1,52 +1,50 @@
+import { useState, useEffect } from 'react';
+import '../styles/sidebar.css'; // agora precisa de CSS dedicado
+
 interface SidebarProps {
   items: { id: string; label: string }[];
 }
 
 export default function Sidebar({ items }: SidebarProps) {
+  const [isOpen, setIsOpen] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsMobile(window.innerWidth <= 768);
+      if (window.innerWidth <= 768) {
+        setIsOpen(false); // sidebar fechada por padrão no mobile
+      } else {
+        setIsOpen(true);
+      }
+    };
+
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
+  }, []);
+
   return (
-    <div style={{
-      position: 'fixed',
-      top: '70px', // ajusta conforme a altura exata da tua navbar
-      left: 0,
-      width: '200px',
-      height: '100%',
-      backgroundColor: '#FFFDF2', // igual à navbar
-      borderRight: '1px solid #000000',
-      padding: '2rem 1rem',
-      boxSizing: 'border-box',
-      zIndex: 10,
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center', // centraliza os links horizontalmente
-    }}>
-      <nav>
-        <ul style={{
-          listStyle: 'none',
-          padding: 0,
-          margin: 0,
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '1.5rem',
-          alignItems: 'center', // centraliza os itens na lista
-        }}>
-          {items.map(item => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                style={{
-                  textDecoration: 'none',
-                  color: '#000000',
-                  fontWeight: 500,
-                  fontSize: '1rem',
-                  transition: 'color 0.3s',
-                }}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
+    <>
+      {isMobile && (
+        <button
+          className="sidebar-toggle"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? '✕' : '☰'}
+        </button>
+      )}
+      <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
+        <nav>
+          <ul>
+            {items.map(item => (
+              <li key={item.id}>
+                <a href={`#${item.id}`}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 }

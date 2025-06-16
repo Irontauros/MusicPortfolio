@@ -59,7 +59,7 @@ Há dias em que preferia esquecê-la, não por ódio, mas por sobrevivência.
 Mas não consigo. Esta canção é isso. Uma verdade que dói.
 Uma confissão que eu não queria fazer.
 Uma parte de mim que ainda não consegui deixar.`,
-    videoId: 'https://youtu.be/ucYFz6MrSC8?si=8jD2RbQnifDMGod_',
+    videoId: 'ucYFz6MrSC8?si=8jD2RbQnifDMGod_',
     reversed: true,
   },
   {

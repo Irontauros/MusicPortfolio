@@ -70,7 +70,7 @@ export default function AboutMe() {
           <img src="/B.png" alt="Memória" style={imageStyle} />
           <p style={textStyle}>
             Tudo começou com uma rapariga. Conhecemo-nos no quinto ano e no sétimo ano tivemos algo, não foi um namoro, muito menos um relacionamento sério, mas foi o mais perto que alguma vez estivemos um do outro.
-            Nunca mais voltámos a estar juntos desde então. E mesmo assim, em segredo, ela foi sempre tudo para mim.
+            Nunca mais voltámos a estar juntos desde então. Só como amigos e mesmo assim, em segredo, ela foi sempre tudo para mim.
             A razão por trás de cada escolha. Mesmo nos momentos em que eu não percebia, ela era o centro de tudo.
           </p>
         </div>
