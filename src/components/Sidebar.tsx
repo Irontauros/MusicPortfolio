@@ -23,18 +23,19 @@ export default function Sidebar({ items }: SidebarProps) {
 
   return (
     <>
-      {isMobile && (
-        <button
-          className="sidebar-toggle"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? '✕' : '☰'}
-        </button>
-      )}
+      <nav className="navbar">
+        {/* Botão toggle só no mobile */}
+        {isMobile && (
+          <button className="sidebar-toggle" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? '✕' : '☰'}
+          </button>
+        )}
+      </nav>
+
       <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
         <nav>
           <ul>
-            {items.map(item => (
+            {items.map((item) => (
               <li key={item.id}>
                 <a href={`#${item.id}`}>{item.label}</a>
               </li>

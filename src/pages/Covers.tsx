@@ -17,8 +17,7 @@ const coversList: CoverItem[] = [
     label: 'Volta',
     artist: 'Diogo Piçarra',
     version: 'Versão acapella',
-    description: `Há canções que dizem tudo por nós, e esta é uma delas. Quando a canto, é como se a tivesse mesmo à minha frente.\n\nNão há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.\n\nCada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.
-`,
+    description: `Há canções que dizem tudo por nós, e esta é uma delas. Quando a canto, é como se a tivesse mesmo à minha frente.\n\nNão há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.\n\nCada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.`,
     videoId: 'mLp800Y-W7Q',
   },
   {
@@ -35,7 +34,7 @@ const coversList: CoverItem[] = [
     artist: 'Dean Lewis',
     version: 'Versão acústica',
     description: `Há dias em que eu gostava que não fosse verdade. Gostava que ela não significasse tudo isto, que não fosse a razão por trás de cada palavra que escrevo ou canto.\n\nMas odeio que é verdade: ela ainda é. Odeio que é verdade que o tempo passou e nada mudou por dentro.\n\nMas não consigo. Esta canção é isso. Uma confissão que eu não queria fazer. Uma parte de mim que ainda não consegui deixar.`,
-    videoId: 'ucYFz6MrSC8?si=8jD2RbQnifDMGod_',
+    videoId: 'ucYFz6MrSC8',
   },
   {
     id: 'wish',

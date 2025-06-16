@@ -1,7 +1,7 @@
 .covers-page {
   width: 100%;
   min-height: 100vh;
-  padding: 8rem 1rem 4rem 260px; /* Espaço extra no topo para navbar */
+  padding: 8rem 1rem 4rem 260px; /* Espaço para sidebar */
   background-color: var(--bg-beige);
   opacity: 0;
   transform: translateY(20px);
@@ -23,7 +23,7 @@
   width: 100%;
   max-width: 1200px;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; /* Força layout horizontal */
   align-items: center;
   justify-content: center;
   gap: 4rem;
@@ -31,16 +31,16 @@
 }
 
 .cover-block.reversed {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Inverte posição do vídeo/texto */
 }
 
 .video-wrapper {
   width: 560px;
-  height: 315px;
+  height: 315px; /* Padrão 16:9 horizontal */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  flex-shrink: 0;
+  flex-shrink: 0; /* Evita encolher */
 }
 
 .video-wrapper iframe {
@@ -84,21 +84,17 @@
   margin: 0.5rem 0 0 0;
 }
 
-/* ----------- Responsivo ----------- */
-
+/* Responsivo para telas médias */
 @media (max-width: 1024px) {
   .covers-page {
     padding-left: 200px;
     gap: 3rem;
   }
 
-  .cover-block {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
+  .cover-block,
   .cover-block.reversed {
     flex-direction: column;
+    gap: 2rem;
   }
 
   .video-wrapper {
@@ -124,6 +120,7 @@
   }
 }
 
+/* Responsivo para telas pequenas */
 @media (max-width: 600px) {
   .covers-page {
     padding-left: 1rem;
