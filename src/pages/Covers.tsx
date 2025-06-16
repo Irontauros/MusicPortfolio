@@ -91,9 +91,8 @@ export default function Covers() {
 
   return (
     <main className={`covers-page ${visible ? 'visible' : ''}`}>
-            <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '3rem' }}>
-        Covers
-      </h1>
+<h1 className="page-title">Covers</h1>
+
       {coversList.map((item, index) => (
         <CoverBlock key={item.id} {...item} reversed={index % 2 !== 0} />
       ))}

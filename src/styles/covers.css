@@ -1,7 +1,7 @@
 .covers-page {
   width: 100%;
   min-height: 100vh;
-  padding: 8rem 1rem 4rem 260px; /* Espaço para sidebar */
+  padding: 6rem 1rem 4rem 260px; /* Espaço para sidebar, topo reduzido */
   background-color: var(--bg-beige);
   opacity: 0;
   transform: translateY(20px);
@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem; /* Menos gap para puxar conteúdo para cima */
 }
 
 .covers-page.visible {
@@ -37,8 +37,8 @@
 .video-wrapper {
   position: relative;
   width: 100%;       /* usa 100% da largura do pai, para ser responsivo */
-  max-width: 560px;  /* largura máxima, igual ao que você já tinha */
-  aspect-ratio: 16 / 9;  /* forçar proporção 16:9 diretamente */
+  max-width: 560px;  /* largura máxima */
+  aspect-ratio: 16 / 9;  /* forçar proporção 16:9 */
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -46,16 +46,15 @@
 }
 
 .video-wrapper iframe {
-  position: absolute;  /* só se usar padding-top + position relative; com aspect-ratio não precisa */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
   display: block;
-  object-fit: cover;  /* para manter o vídeo sem distorcer */
+  object-fit: cover;
 }
-
 
 .text-container {
   flex: 1;
@@ -92,17 +91,26 @@
   margin: 0.5rem 0 0 0;
 }
 
-/* Responsivo para telas médias */
+/* Título principal */
+.page-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+/* Responsivo para telas médias (tablet) */
 @media (max-width: 1024px) {
   .covers-page {
-    padding-left: 200px;
-    gap: 3rem;
+    padding: 6rem 1rem 3rem 200px;
+    gap: 1.5rem;
   }
 
   .cover-block,
   .cover-block.reversed {
     flex-direction: column;
-    flex-wrap: wrap; /* permite quebra */
+    flex-wrap: wrap;
     gap: 2rem;
   }
 
@@ -127,11 +135,15 @@
   }
 }
 
-/* Responsivo para telas pequenas */
+/* Responsivo para telas pequenas (telemóveis) */
 @media (max-width: 600px) {
   .covers-page {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 6rem 1rem 3rem 1rem; /* Igual ao About Me */
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+    margin-top: 1rem; /* Espaço para não colar na navbar */
   }
 
   .text-container h2 {

@@ -43,7 +43,7 @@ export default function AboutMe() {
       style={{
         minHeight: '100vh',
         width: '100%',
-        padding: isMobile ? '6rem 1.5rem 4rem' : '4rem 1.5rem',
+        padding: isMobile ? '7.5rem 1.5rem 4rem' : '4rem 1.5rem',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
