@@ -9,7 +9,6 @@ type CoverItem = {
   version: string;
   description: string;
   videoId: string;
-  reversed?: boolean;
 };
 
 const coversList: CoverItem[] = [
@@ -18,11 +17,7 @@ const coversList: CoverItem[] = [
     label: 'Volta',
     artist: 'Diogo Piçarra',
     version: 'Versão acapella',
-    description: `Há canções que dizem tudo por nós, e esta é uma delas.
-Quando a canto, é como se a tivesse mesmo à minha frente.
-
-Não há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.
-Cada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.
+    description: `Há canções que dizem tudo por nós, e esta é uma delas. Quando a canto, é como se a tivesse mesmo à minha frente.\n\nNão há metáforas aqui, não há complicações. Só uma vontade crua de voltar atrás, de agarrar o que deixei fugir.\n\nCada palavra desta música podia ter saído da minha boca, naquele silêncio em que nos perdemos.
 `,
     videoId: 'mLp800Y-W7Q',
   },
@@ -31,45 +26,36 @@ Cada palavra desta música podia ter saído da minha boca, naquele silêncio em 
     label: 'Contigo',
     artist: 'Fernando Daniel',
     version: 'Versão acústica',
-    description: `Se eu pudesse escolher uma única canção para lhe mostrar o que sinto… seria esta.
-Porque tudo faz sentido, se for contigo.
-
-Mesmo nos dias em que tudo corre mal, em que o mundo parece desabar, se ela estivesse ali, ao meu lado, bastava.
-Canto isto como quem confessa algo que guardou por demasiado tempo.`,
+    description: `Se eu pudesse escolher uma única canção para lhe mostrar o que sinto… seria esta.\n\n-"Porque tudo faz sentido, se for contigo."\n\nMesmo nos dias em que tudo corre mal, em que o mundo parece desabar, se ela estivesse ali, ao meu lado, bastava. Canto isto como quem confessa algo que guardou por demasiado tempo.`,
     videoId: 'VIDEO_ID_CONTIGO',
   },
   {
     id: 'ihate',
-    label: 'I Hate That It\'s True',
+    label: "I Hate That It's True",
     artist: 'Dean Lewis',
     version: 'Versão acústica',
-    description: `Há dias em que eu gostava que não fosse verdade.
-Gostava que ela não significasse tudo isto, que não fosse a razão por trás de cada palavra que escrevo ou canto.
-Mas odeio que é verdade: ela ainda é.
-
-Odeio que é verdade que o tempo passou e nada mudou por dentro.
-
-Mas não consigo. Esta canção é isso. Uma verdade que dói.
-Uma confissão que eu não queria fazer.
-Uma parte de mim que ainda não consegui deixar.`,
+    description: `Há dias em que eu gostava que não fosse verdade. Gostava que ela não significasse tudo isto, que não fosse a razão por trás de cada palavra que escrevo ou canto.\n\nMas odeio que é verdade: ela ainda é. Odeio que é verdade que o tempo passou e nada mudou por dentro.\n\nMas não consigo. Esta canção é isso. Uma confissão que eu não queria fazer. Uma parte de mim que ainda não consegui deixar.`,
     videoId: 'ucYFz6MrSC8?si=8jD2RbQnifDMGod_',
-    reversed: true,
   },
   {
     id: 'wish',
     label: 'Wish You the Best',
     artist: 'Lewis Capaldi',
     version: 'Versão acústica',
-    description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.
-Só um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.
-
-Há algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua.
-E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
+    description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.\n\nSó um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.\n\nHá algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua. E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
     videoId: 'VIDEO_ID_LEWIS',
   },
 ];
 
-function CoverBlock({ id, label, artist, version, description, videoId, reversed }: CoverItem) {
+function CoverBlock({
+  id,
+  label,
+  artist,
+  version,
+  description,
+  videoId,
+  reversed,
+}: CoverItem & { reversed: boolean }) {
   return (
     <section id={id} className={`cover-block ${reversed ? 'reversed' : ''}`}>
       <div className="video-wrapper">
@@ -109,8 +95,8 @@ export default function Covers() {
     <>
       <Sidebar items={coversList.map(({ id, label }) => ({ id, label }))} />
       <main className={`covers-page ${visible ? 'visible' : ''}`}>
-        {coversList.map((item) => (
-          <CoverBlock key={item.id} {...item} />
+        {coversList.map((item, index) => (
+          <CoverBlock key={item.id} {...item} reversed={index % 2 !== 0} />
         ))}
       </main>
     </>

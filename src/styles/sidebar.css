@@ -1,18 +1,14 @@
-/* src/styles/sidebar.css */
-
 .sidebar {
   position: fixed;
-  top: 64px; /* altura da navbar para não sobrepor */
+  top: 60px; /* ajusta se a navbar tiver outra altura */
   left: 0;
   width: 200px;
-  height: calc(100vh - 64px);
-  background-color: var(--bg-beige); /* igual à navbar */
-  border-right: 1px solid #000000;
-  padding: 1rem;
-  box-sizing: border-box;
+  height: calc(100vh - 60px);
   overflow-y: auto;
+  background-color: #FFFDF2;
+  border-right: 1px solid #000;
   transition: transform 0.3s ease-in-out;
-  z-index: 99;
+  z-index: 90;
 }
 
 .sidebar.closed {
@@ -30,47 +26,30 @@
 }
 
 .sidebar nav li {
-  margin-bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
 }
 
 .sidebar nav a {
+  color: #000;
   text-decoration: none;
-  color: var(--text-dark); /* #000000 via app.css */
   font-weight: 500;
-  transition: color 0.2s;
 }
 
-.sidebar nav a:hover {
-  color: #222222;
-}
-
-/* Botão toggle para mobile */
 .sidebar-toggle {
   position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 100;
-  background: var(--color-dark); /* Preto */
-  color: var(--color-light); /* Cream */
-  border: none;
+  top: 1rem;
+  left: 1rem;
+  z-index: 110;
   font-size: 1.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  color: #000;
 }
 
-.sidebar-toggle:hover {
-  background: #222;
-}
-
-/* Mobile refinamentos */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 160px;
-  }
-
-  .sidebar nav li {
-    margin-bottom: 0.75rem;
+@media (min-width: 769px) {
+  .sidebar-toggle {
+    display: none;
   }
 }

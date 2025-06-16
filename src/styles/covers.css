@@ -1,8 +1,7 @@
-/* Covers.css */
 .covers-page {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem 1rem 4rem 260px;
+  padding: 8rem 1rem 4rem 260px; /* Espaço extra no topo para navbar */
   background-color: var(--bg-beige);
   opacity: 0;
   transform: translateY(20px);
@@ -11,7 +10,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
 }
 
 .covers-page.visible {
@@ -20,7 +19,7 @@
 }
 
 .cover-block {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
   width: 100%;
   max-width: 1200px;
   display: flex;
@@ -29,9 +28,6 @@
   justify-content: center;
   gap: 4rem;
   box-sizing: border-box;
-  position: relative;
-  top: -60px;
-  padding-top: 60px;
 }
 
 .cover-block.reversed {
@@ -88,19 +84,17 @@
   margin: 0.5rem 0 0 0;
 }
 
-/* ------------- Responsivo ------------- */
+/* ----------- Responsivo ----------- */
 
 @media (max-width: 1024px) {
   .covers-page {
     padding-left: 200px;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .cover-block {
     flex-direction: column;
     gap: 2rem;
-    top: -30px;
-    padding-top: 30px;
   }
 
   .cover-block.reversed {

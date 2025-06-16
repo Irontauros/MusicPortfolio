@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import '../styles/sidebar.css'; // agora precisa de CSS dedicado
+import '../styles/sidebar.css';
 
 interface SidebarProps {
   items: { id: string; label: string }[];
@@ -11,12 +11,9 @@ export default function Sidebar({ items }: SidebarProps) {
 
   useEffect(() => {
     const checkWidth = () => {
-      setIsMobile(window.innerWidth <= 768);
-      if (window.innerWidth <= 768) {
-        setIsOpen(false); // sidebar fechada por padrão no mobile
-      } else {
-        setIsOpen(true);
-      }
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      setIsOpen(!mobile); // aberta no desktop, fechada no mobile
     };
 
     checkWidth();

@@ -18,7 +18,8 @@ export default function Navbar() {
 
   const navStyle: CSSProperties = {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: isMobile ? 'column' : 'row',
+    justifyContent: isMobile ? 'center' : 'space-between',
     alignItems: 'center',
     padding: isMobile ? '0.5rem 1rem' : '1rem 2rem',
     backgroundColor: '#FFFDF2',
@@ -37,19 +38,18 @@ export default function Navbar() {
     color: '#000000',
     textDecoration: 'none',
     whiteSpace: 'nowrap',
-    marginBottom: '0.3rem',
+    marginBottom: isMobile ? '0.3rem' : '0',
   };
 
-const navLinksContainer: CSSProperties = {
-  display: 'flex',
-  justifyContent: 'center',
-  flexWrap: 'wrap',
-  gap: isMobile ? '0.8rem' : '2rem',
-  width: '100%',
-  overflowX: 'auto',
-  paddingLeft: isMobile ? '2.5rem' : '0', // <- ESTA LINHA
-};
-
+  const navLinksContainer: CSSProperties = {
+    display: 'flex',
+    justifyContent: isMobile ? 'center' : 'flex-end',
+    flexWrap: 'wrap',
+    gap: isMobile ? '0.8rem' : '2rem',
+    width: isMobile ? '100%' : 'auto',
+    overflowX: 'auto',
+    paddingLeft: isMobile ? '2.5rem' : '0',
+  };
 
   const linkStyle = (isActive: boolean): CSSProperties => ({
     textDecoration: 'none',
