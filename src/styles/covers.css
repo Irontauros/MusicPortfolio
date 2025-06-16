@@ -1,7 +1,7 @@
 .covers-page {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem 1rem 4rem 260px; /* Espaço para sidebar, topo reduzido */
+  padding: 6rem 1rem 4rem 1rem; /* Removido espaço da sidebar */
   background-color: var(--bg-beige);
   opacity: 0;
   transform: translateY(20px);
@@ -10,8 +10,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem; /* Menos gap para puxar conteúdo para cima */
+  gap: 1.25rem; /* Gap menor */
 }
+
 
 .covers-page.visible {
   opacity: 1;
