@@ -40,7 +40,7 @@ const coversList: CoverItem[] = [
     label: 'Wish You the Best',
     artist: 'Lewis Capaldi',
     version: 'Versão acústica',
-    description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.\n\nSó um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.\n\nHá algo de cruel em amar tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua. E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
+    description: `Esta foi uma das músicas mais difíceis de cantar. Porque é uma despedida sem raiva.\n\nSó um desejo genuíno de que ela esteja bem. Mesmo longe. Mesmo sem mim.\n\nHá algo de cruel em querer tanto alguém ao ponto de lhe desejar o melhor, mesmo que esse “melhor” não me inclua. E esta música carrega isso. Uma dor que não grita, mas que aperta devagar.`,
     videoId: 'hsFHSdU6c8o',
   },
 ];
