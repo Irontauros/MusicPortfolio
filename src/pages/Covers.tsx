@@ -11,6 +11,14 @@ type CoverItem = {
 };
 
 const coversList: CoverItem[] = [
+    {
+    id: 'vouteamar',
+    label: 'Vou-te Amar',
+    artist: 'Tony Carreira',
+    version: 'Versão Karaoke\nOriginal: https://youtu.be/dsoL8uWqRVI?si=GcDKPUni4mmP5PtI',
+    description: `Peço desculpa, o final foi mais sentido e nota-se na voz...\n\nNão tenho mais nada a acrescentar, está tudo na letra desta canção.`,
+    videoId: '2b1jeKsC-8w',
+  },
   {
     id: 'volta',
     label: 'Volta',
