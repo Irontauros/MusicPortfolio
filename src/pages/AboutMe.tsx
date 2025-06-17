@@ -78,6 +78,8 @@ export default function AboutMe() {
             mas foi o mais perto que alguma vez estivemos um do outro.
             Nunca mais voltámos a estar juntos desde então. Só como amigos e mesmo assim, em segredo, ela foi sempre tudo para mim.
             A razão por trás de cada escolha. Mesmo nos momentos em que eu não percebia, ela era o centro de tudo.
+            Esta imagem é a parte superior da capa do meu primeiro álbum em planeamento intitulado "B" (imagem e nome podem sofrer alterações),
+            mas para mim só faz sentido ser uma dedicação.
           </p>
         </div>
 
