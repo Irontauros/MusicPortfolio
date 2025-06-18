@@ -71,7 +71,7 @@ export default function Originals() {
 
   return (
     <main className={`covers-page ${visible ? 'visible' : ''}`}>
-  <h1 className="page-title">Originais</h1>
+  <h1 className="page-title"> </h1>
 
       {originalsList.map((item, index) => (
         <OriginalBlock

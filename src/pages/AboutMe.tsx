@@ -55,7 +55,7 @@ export default function AboutMe() {
       }}
     >
       <h1 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '2rem' }}>
-        Sobre mim
+         
       </h1>
 
       <div style={{ width: '100%', maxWidth: '1400px', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
