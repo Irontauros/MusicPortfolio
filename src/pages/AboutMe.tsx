@@ -79,8 +79,7 @@ export default function AboutMe() {
             Nunca mais voltámos a estar juntos desde então.
             Mas ela é razão por trás de cada escolha. Mesmo nos momentos em que eu não percebia, ela era o centro de tudo.
             
-            Esta imagem é a parte superior da capa do meu primeiro álbum em planeamento intitulado "B" (imagem e nome podem sofrer alterações),
-            mas para mim só faz sentido ser uma dedicação.
+            Esta imagem é a parte superior da capa do meu primeiro álbum em planeamento intitulado "B" (imagem e nome podem sofrer alterações).
           </p>
         </div>
 
