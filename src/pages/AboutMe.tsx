@@ -61,7 +61,7 @@ export default function AboutMe() {
       <div style={{ width: '100%', maxWidth: '1400px', display: 'flex', flexDirection: 'column', gap: '5rem' }}>
         {/* 1. Quem sou eu */}
         <div style={sectionStyle}>
-          <img src="/guitar.jpeg" alt="Loop pedal e guitarra" style={imageStyle} />
+          <img src="/playing.jpeg" alt="Loop pedal e guitarra" style={imageStyle} />
           <p style={textStyle}>
             Sou cantor e compositor. As minhas canções nascem em silêncio. Com uma guitarra nas mãos e uma memória a repetir-se.
             Crio a sós, como quem escreve cartas que nunca envia.
@@ -97,7 +97,7 @@ export default function AboutMe() {
 
         {/* 4. Arte e propósito */}
         <div style={{ ...sectionStyle, flexDirection: 'row-reverse' }}>
-          <img src="/playing.png" alt="Esperança" style={imageStyle} />
+          <img src="/guitar.jpeg" alt="Esperança" style={imageStyle} />
           <p style={textStyle}>
             Não tenho palco, nem contrato, nem ninguém a fazer isto comigo. Só tenho canções. E vontade.
             Acredito que cada canção que gravo pode chegar até ela. Talvez a faça lembrar, talvez a faça pensar. Talvez não.
